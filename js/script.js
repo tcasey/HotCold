@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	
+
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
     	$(".overlay").fadeIn(1000);
@@ -25,18 +25,18 @@ $(document).ready(function(){
   	var newGame = function() {
   		randomNumber = randomNumberGenerator();
   		counter = 0;
-  		GlobalRandomNumber = randomNumber; 
+  		GlobalRandomNumber = randomNumber;
   		$('#count').text(counter);
   		$('#guessList').text('');
   		$("#feedback").text('Make your Guess!');
   	};
 
   	newGame();
-  	
+
   	$("#guessButton").on("click", function() {
   		event.preventDefault(); // prevent page reload on event
-  		var userGuess = Number(document.getElementById("userGuess").value);  //reference to input text field 
-  
+  		var userGuess = Number(document.getElementById("userGuess").value);  //reference to input text field
+
 	  	if (userGuess <= 100 && isNaN(userGuess) === false) {
 	  		$('#guessList').append(userGuess + " ");
 	  		counter++; // increment global counter
@@ -46,20 +46,20 @@ $(document).ready(function(){
   			$("#feedback").text('winner!!');
 	  		} else if (userGuess > 100 || isNaN(userGuess)) {
 	  			$("#feedback").text('enter a number from 1 to 100');
-	  			
+
 	  		}
 	  			else if (userGuess > (randomNumber + 50) || userGuess < (randomNumber - 50)) {
 	  			$("#feedback").text('icecold');
-	  			
+
 	  		} else if (userGuess > (randomNumber + 30) || userGuess < (randomNumber - 30)) {
 	  			$("#feedback").text('cold');
-	  	
-	  		} else if (userGuess > (randomNumber + 20) || userGuess < (randomNumber - 20)) {
+
+	  		} else if (userGuess > (randomNumber + 15) || userGuess < (randomNumber - 15)) {
 	  			$("#feedback").text('warm');
-	  			
-	  		} else if (userGuess > (randomNumber + 10) || userGuess < (randomNumber - 10)) {
+
+	  		} else if (userGuess > (randomNumber + 5) || userGuess < (randomNumber - 5)) {
 	  			$("#feedback").text('hot');
-	  			
+
 	  		} else if (userGuess > (randomNumber + 1) || userGuess < (randomNumber - 1)) {
 	  			$("#feedback").text('very hot');
 	  		}
@@ -68,7 +68,7 @@ $(document).ready(function(){
 	  		$('#count').text(counter); //updates counter div
 
   	});
-  	
+
   	$('.new').on("click", function() {  // calls newGame function on click event
   		newGame();
 
