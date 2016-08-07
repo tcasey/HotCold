@@ -28,7 +28,7 @@ $(document).ready(function(){
   		GlobalRandomNumber = randomNumber;
   		$('#count').text(counter);
   		$('#guessList').text('');
-  		$("#feedback").text('Make your Guess!');
+  		$("#feedback").text('Hot & Cold');
   	};
 
   	newGame();
@@ -39,29 +39,41 @@ $(document).ready(function(){
 
 	  	if (userGuess <= 100 && isNaN(userGuess) === false) {
 	  		$('#guessList').append(userGuess + " ");
+        // var color = $("#feedback").css('color');
+        $('#guessList').css('color', '#999');
 	  		counter++; // increment global counter
 	  	}
 
   		if (userGuess == randomNumber) {
   			$("#feedback").text('winner!!');
+        $("#feedback").css('color', '#bdb380');
 	  		} else if (userGuess > 100 || isNaN(userGuess)) {
 	  			$("#feedback").text('enter a number from 1 to 100');
+          $("#feedback").css('color', '#fff');
 
 	  		}
 	  			else if (userGuess > (randomNumber + 50) || userGuess < (randomNumber - 50)) {
 	  			$("#feedback").text('icecold');
+          $("#feedback").css('color', 'rgb(48, 63, 159)');
 
 	  		} else if (userGuess > (randomNumber + 30) || userGuess < (randomNumber - 30)) {
 	  			$("#feedback").text('cold');
+          $("#feedback").css('color', 'rgb(3, 169, 244)');
 
 	  		} else if (userGuess > (randomNumber + 15) || userGuess < (randomNumber - 15)) {
 	  			$("#feedback").text('warm');
+          $("#feedback").css('color', 'rgb(255, 152, 0)');
+
 
 	  		} else if (userGuess > (randomNumber + 5) || userGuess < (randomNumber - 5)) {
 	  			$("#feedback").text('hot');
+          $("#feedback").css('color', 'rgb(244, 67, 54)');
+
 
 	  		} else if (userGuess > (randomNumber + 1) || userGuess < (randomNumber - 1)) {
 	  			$("#feedback").text('very hot');
+          $("#feedback").css('color', 'rgb(211, 47, 47)');
+
 	  		}
 
 	  		$('#userGuess').val(''); //resets input field

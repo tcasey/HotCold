@@ -18,7 +18,7 @@
 html {
 	width: 100%;
 	height: 100%;
-	background-color: gray;
+	background-color: #f2f2f2;
 }
 
 body {
@@ -26,15 +26,9 @@ body {
 	width: 98%;
 	height: 96%;
 	margin: 0.8em auto;
-	font-family: 'Lato', Calibri, Arial, sans-serif;
-	background: radial-gradient(gray 1%,maroon 100%);
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+	background: #f1f1f1;
 	text-align: center;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 }
 
 a {
@@ -72,14 +66,14 @@ nav ul li:last-child {
 
 nav a {
 
-	color: #fff;
+	color: #bdb380;
 }
 
 h1 {
 	font-weight: 900;
 	font-size: 3em;
 	padding: 0.2em;
-	color: #fff;
+	color: #f2f2f2;
 
 }
 
@@ -87,8 +81,8 @@ h1 {
 .overlay {
 	width: 100%;
 	height: 100%;
-	color: rgba(25,74,77,1);
-	background: radial-gradient(gray 1%,maroon 100%);
+  color: rgba(0,0,0,.87);
+	background: #f3f3f3;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -98,15 +92,15 @@ h1 {
 }
 
 .content {
-	color: rgba(25,74,77,1);
-	background: #F9F1DD;
-	position: relative;
+  color: rgba(0,0,0,.87);
+	background: #fff;
 	height: auto;
 	width: 600px;
 	border-radius: 3px;
 	top: 15%;
 	margin: auto auto;
-	border: 1px solid rgba(0,0,0,0.1);
+  margin-top: 5%;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .content h3 {
@@ -149,38 +143,68 @@ h1 {
 }
 
 .content > div ul li strong{
-	text-decoration: underline;
+
 }
 
-.content > div a {
-	font-size: 0.8em;
-	opacity: 0.8;
-	background: rgba(0,0,0,0.1);
-	color: rgba(25,74,77,1);
-	padding: 0.5em 2em;
-	margin-bottom: 50px;
-	border-radius: 3px;
+
+.content > div a  {
+  background: 0 0;
+  border: none;
+  border-radius: 2px;
+  color: #3f51b5;
+  position: relative;
+  height: 36px;
+  margin: 1em;
+  min-width: 64px;
+  padding: 0 16px;
+  display: inline-block;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  overflow: hidden;
+  will-change: box-shadow;
+  transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 36px;
+  vertical-align: middle;
+  background: rgba(158,158,158,.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
-.content > div a:hover {
-	background-color: LightGray;
-	color: maroon;
+
+.content > div a:active {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+    background-color: rgba(158,158,158,.4);
 }
+
+
 /*---------------------------------------------------------------------------------
    Game Section Styles
 ---------------------------------------------------------------------------------*/
+.what {
+  color: #999;
+}
+
+.new {
+  color: #999;
+}
+.plus {
+  color:  #FF2222;
+}
 
 .game {
 	position: relative;
-	background: #F9F1DD;
+	background: #fff;
 	width: 380px;
-	height: 380px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	margin: 0 auto;
-
-
-
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 h2 {
@@ -189,36 +213,34 @@ h2 {
 	background: rgba(0,0,0,0.1);
 	padding: 1em 0.4em;
 	font-size: 1.5em;
-	font-weight: 400;
+	font-weight: 300;
 	display: block;
 	line-height: 1em;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-	color: rgba(25,74,77,1);
+	color: #fff;
 }
 
 .game p {
-	margin-top: 0.5em;
+	margin: 0.5em 0 0 0;
 	font-size: 1.8em;
 	padding-bottom: 0.5em;
-	color: rgba(25,74,77,1);
+	color: #f3f3f3;
 }
 
 #count {
-	color: maroon;
+	color: #3f51b5;
 	font-weight: 400;
 	font-size: 1.5em;
 }
 
 input {
-	width: 300px;
+	/*width: 300px;*/
 	height: 50px;
 	display: block;
 	padding: 0.8em 0;
 	margin: 0.8em auto 0;
 	opacity: 0.8;
 	background: rgba(0,0,0,0.1);
-	color: rgba(25,74,77,1);
+	color: #3f51b5;
 	border: solid 1px transparent;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -226,38 +248,37 @@ input {
 }
 
 input.button {
-	opacity: 0.8;
-	background: rgba(0,0,0,0.1);
-	color: maroon;
-	font-size: 2em;
-	padding: 0.2em;
-	-webkit-transition: background 1s ease-in-out;
-	-moz-transition: background 1s ease-in-out;
-	-ms-transition: background 1s ease-in-out;
-	-o-transition: background 1s ease-in-out;
-	transition: background 1s ease-in-out;
-	-webkit-transition: border 1s ease-in-out;
-	-moz-transition: border 1s ease-in-out;
-	-ms-transition: border 1s ease-in-out;
-	-o-transition: border 1s ease-in-out;
-	transition: border 1s ease-in-out;
+  background: 0 0;
+  border: none;
+  border-radius: 2px;
+  color: #3f51b5;
+  position: relative;
+  height: 36px;
+  margin: 1em;
+  min-width: 64px;
+  padding: 0 16px;
+  display: inline-block;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  overflow: hidden;
+  will-change: box-shadow;
+  transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 36px;
+  vertical-align: middle;
+  background: rgba(158,158,158,.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
-input.button:hover {
-	background: maroon;
-	color: #fff;
-	border: transparent;
-	-webkit-transition: background 1s ease-in-out;
-	-moz-transition: background 1s ease-in-out;
-	-ms-transition: background 1s ease-in-out;
-	-o-transition: background 1s ease-in-out;
-	transition: background 1s ease-in-out;
-	-webkit-transition: border 1s ease-in-out;
-	-moz-transition: border 1s ease-in-out;
-	-ms-transition: border 1s ease-in-out;
-	-o-transition: border 1s ease-in-out;
-	transition: border 1s ease-in-out;
-	cursor: pointer;
+input.button:active {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+    background-color: rgba(158,158,158,.4);
 }
 
 input.text {
@@ -289,18 +310,22 @@ input:focus {
 ul.guessBox {
 	height: 80px;
 	margin: 10px auto 0;
-	background: maroon;
 	padding: 0.5em;
 	display: block;
 	line-height: 2em;
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
-	color: #fff;
+	color: #f3f3f3;
 	overflow: auto;
+    font-size: 16px;
+    line-height: normal;
+    width: 100%;
+    background-color: transparent;
+    padding: 8px;
+    box-sizing: border-box;
 }
 ul.guessBox li {
 	display: inline;
-	background-color: maroon;
 	padding: 0.3em;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -308,4 +333,117 @@ ul.guessBox li {
 	width: 95%;
 	margin: 0.2em;
 	color: #fff;
+}
+#userGuess {
+  height: 1.9rem;
+  display: block;
+  background: none;
+  padding: 0.125rem 3.125rem 0.0625rem 0.125rem;
+  margin-top: 1.5em;
+  font-size: 1rem;
+  border-width: 0;
+  border-color: transparent;
+  width: 100%;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+  box-shadow: none;
+}
+
+.group 			  {
+  position:relative;
+  margin-bottom:45px;
+  margin-left: 10%;
+}
+.group input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{
+  outline:none;
+}
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  left: 126px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{
+  position:relative;
+  display:block;
+  width:300px;
+}
+
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#5264AE;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+svg {
+  left: -100%;
+  right: -100%;
+  top: 30%;
+  width: 140px;
+  height: 80px;
+  margin: 1em auto;
 }
